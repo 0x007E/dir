@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Radio")(type "KiCad")(uri "${KIPRJMOD}/lib/Radio.kicad_sym")(options "")(descr ""))
+  (lib (name "Codec")(type "KiCad")(uri "${KIPRJMOD}/lib/Codec.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS")(type "KiCad")(uri "${KIPRJMOD}/lib/TPS61023DRLR.kicad_sym")(options "")(descr ""))
+)
+
