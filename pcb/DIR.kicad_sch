@@ -4954,7 +4954,7 @@
     (property "Vendor" "HTL" (at 265.43 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "VendorId" "100188" (at 265.43 69.85 0)
+    (property "VendorId" "100194" (at 265.43 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid 1847f61b-a8af-4da2-b578-a7392517082e))
