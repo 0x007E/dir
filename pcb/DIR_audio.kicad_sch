@@ -2014,7 +2014,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 171e75e9-34d3-4905-bff7-52083e54a2d2)
   )
-  (text "TWI-Address (~{SEN})\n0=0b0010001\n1=0b0010011" (at 235.585 76.835 0)
+  (text "TWI-Address (~{SEN})\n0=0b0010001\n1=0b1100011" (at 235.585 76.835 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 44ae6d0d-028c-4204-8e84-f506fa2102fa)
   )
