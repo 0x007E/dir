@@ -5304,9 +5304,9 @@
       (rotate (xyz 0 0 0))
     )
     (model "${KIPRJMOD}/lib/OLED TFT 0.96 inch 64x128 monochrome.step" hide
-      (offset (xyz 1.5 -3.85 5))
+      (offset (xyz -1.5 -3.85 5))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 90))
+      (rotate (xyz -90 0 -90))
     )
   )
 
