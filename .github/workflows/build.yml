@@ -11,12 +11,12 @@ on:
 jobs:
   export-kicad:
     env:
-      BaseFileName: "DIR"
-      Folder: "./pcb"
-      SchematicFileExtension: "kicad_sch"
-      PCBFileExtension: "kicad_pcb"
-      OutputFolder: "./output"
-      ConfigFilePath: ".kibot/build.kibot.yaml"
+      BASEFILENAME: "DIR"
+      FOLDER: "./pcb"
+      SCHEMATICFILEEXTENSION: "kicad_sch"
+      PCBFILEEXTENSION: "kicad_pcb"
+      OUTPUTFOLDER: "./output"
+      CONFIGFILEPATH: ".kibot/build.kibot.yaml"
     runs-on: ubuntu-latest
     steps:
     - name: Fetch repository
@@ -24,21 +24,21 @@ jobs:
     
     - name: Prepare output directory
       run: |
-        mkdir -p ${{ env.OutputFolder }}
-        cp -r ${{ env.Folder }} ${{ env.OutputFolder }}/kicad
-        cp ./LICENSE ${{ env.OutputFolder }}
+        mkdir -p ${{ env.OUTPUTFOLDER }}
+        cp -r ${{ env.FOLDER }} ${{ env.OUTPUTFOLDER }}/kicad
+        cp ./LICENSE ${{ env.OUTPUTFOLDER }}
 
     - name: Run KiBOT
       uses: INTI-CMNB/KiBot@v2_dk7
       with:
-        config: ${{ env.ConfigFilePath }}
-        dir: ${{ env.OutputFolder }}
-        schema: "${{ env.Folder }}/${{ env.BaseFileName }}.${{ env.SchematicFileExtension }}"
-        board: "${{ env.Folder }}/${{ env.BaseFileName }}.${{ env.PCBFileExtension }}"
+        config: ${{ env.CONFIGFILEPATH }}
+        dir: ${{ env.OUTPUTFOLDER }}
+        schema: "${{ env.FOLDER }}/${{ env.BASEFILENAME }}.${{ env.SCHEMATICFILEEXTENSION }}"
+        board: "${{ env.FOLDER }}/${{ env.BASEFILENAME }}.${{ env.PCBFILEEXTENSION }}"
 
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
         name: kicad-export
-        path: ${{ env.OutputFolder }}
+        path: ${{ env.OUTPUTFOLDER }}
         retention-days: 1
